@@ -1,0 +1,29 @@
+<html lang="en">
+    <%- include("head", {title: title}); %>
+    <body>
+        <%- include("header"); %>
+        <hr>
+        <div class="day-date">Tuesday 24th</div>
+        <% for (let message of messages[0]) {
+            let disposition = "";
+            if (message.user_id === 1) {
+                disposition = "left";
+            }
+            else
+            {
+                disposition = "right";
+            } %>
+            <div class="container-<%= disposition %>">
+                <p class="user"><%= disposition === "left" ? "WatSen" : "You" %></p>
+                <p><%- message.content.replace("\r\n", "<br>") %></p>
+                <span class="time"><%= message.date.getHours() + ":" + message.date.getMinutes() + ":" + message.date.getSeconds() %></span>
+            </div>
+        <% } %>
+        <label for="input" style="font-weight: bold">Type here</label>
+        <div class="input-wrapper">
+            <textarea id="input"></textarea>
+            <img src="https://img.icons8.com/ios/452/microphone.png" alt="micro" class="micro" onclick="">
+        </div>
+        <%- include("footer"); %>
+    </body>
+</html>
