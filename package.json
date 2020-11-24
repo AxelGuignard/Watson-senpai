@@ -1,0 +1,8 @@
+{
+  "name": "Watson-senpai",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.17.1",
+    "twig": "^1.15.3"
+  }
+}
