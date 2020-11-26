@@ -97,7 +97,7 @@ app.get("/", function (req, res)
     con.query("SELECT * FROM message", function(error, result, fields)
     {
         messages.push(result);
-        res.render("index", {title: "Watson Senpai POC", messages: messages});
+        res.render("index", {title: "Watson Sensei POC", messages: messages});
     });
 });
 
