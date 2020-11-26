@@ -3,7 +3,8 @@
     <body>
         <%- include("header"); %>
         <hr>
-        <div class="day-date">Tuesday 24th</div>
+        <div class="day-date">Thursday 26th</div>
+        <div id="chat">
         <% for (let message of messages[0]) {
             let disposition = "";
             if (message.user_id === 1) {
@@ -16,13 +17,16 @@
             <div class="container-<%= disposition %>">
                 <p class="user"><%= disposition === "left" ? "WatSen" : "You" %></p>
                 <p><%- message.content.replace("\r\n", "<br>") %></p>
-                <span class="time"><%= message.date.getHours() + ":" + message.date.getMinutes() + ":" + message.date.getSeconds() %></span>
+                <span class="time"><%= String(message.date.getHours()).padStart(2, "0") + ":" + String(message.date.getMinutes()).padStart(2, "0") + ":" + String(message.date.getSeconds()).padStart(2, "0") %></span>
             </div>
         <% } %>
+        </div>
         <label for="input" style="font-weight: bold">Type here</label>
         <div class="input-wrapper">
             <textarea id="input"></textarea>
-            <img src="https://img.icons8.com/ios/452/microphone.png" alt="micro" class="micro" onclick="">
+            <div class="background-micro" onclick="toggleSpeechRecognition(this)" data-state="off">
+                <img src="https://img.icons8.com/ios/452/microphone.png" alt="micro" class="micro">
+            </div>
         </div>
         <%- include("footer"); %>
     </body>

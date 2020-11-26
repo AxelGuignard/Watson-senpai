@@ -40,15 +40,10 @@
     vertical-align: super;
 }
 
-.micro:hover
-{
-    cursor: pointer;
-}
-
 #input
 {
     resize: none;
-    width: 95vw;
+    width: 94vw;
     border-radius: 5px;
     padding-top: 1vh;
     margin-top: 1vh;
@@ -65,4 +60,18 @@
     font-weight: bolder;
     font-size: 18px;
     margin: 0;
+}
+
+.background-micro
+{
+    display: inline-block;
+    width: fit-content;
+    background-color: #f9813a;
+    border-radius: 50%;
+    padding: 0.5vw;
+}
+
+.background-micro:hover
+{
+    cursor: pointer;
 }
