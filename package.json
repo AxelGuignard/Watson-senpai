@@ -12,5 +12,8 @@
     "sox": "^0.1.0",
     "tough-cookie": "^4.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  }
 }
