@@ -10,7 +10,7 @@
     "mic": "^2.1.2",
     "mysql": "^2.18.1",
     "sox": "^0.1.0",
-    "tough-cookie": "^4.0.0",
+    "tough-cookie": "^4.0.0"
   },
   "devDependencies": {}
 }
